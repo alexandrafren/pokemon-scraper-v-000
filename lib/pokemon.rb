@@ -1,12 +1,11 @@
 class Pokemon
   attr_accessor :name, :type, :db, :id, :hp
 
-  def initialize(id = nil, name = nil, type = nil, db, hp)
+  def initialize(id = nil, name = nil, type = nil, db)
     @id = id
     @name = name
     @type = type
     @db = db
-    @hp = hp
   end
 
   def self.save(name, type, db)
@@ -15,7 +14,7 @@ class Pokemon
 
   def self.find(otherid, db)
     newbie = db.execute("SELECT * FROM pokemon WHERE pokemon.id = ?", otherid).flatten
-    self.new(@id=newbie[0], @name=newbie[1],@type=newbie[2], @hp=newbie[3],@db=db)
+    self.new(@id=newbie[0], @name=newbie[1],@type=newbie[2],@db=db)
   end
 
 end
