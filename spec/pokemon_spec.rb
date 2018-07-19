@@ -48,8 +48,8 @@ describe "Pokemon" do
       Pokemon.save('Magikarp', 'water', @db)
     end
 
-    let(:pikachu){Pokemon.find(1, @db)}
-    let(:magikarp){Pokemon.find(2, @db)}
+    #let(:pikachu){Pokemon.find(1, @db)}
+  #  let(:magikarp){Pokemon.find(2, @db)}
 
     # remove the 'x' before 'it' to run these tests
     #it "knows that a pokemon have a default hp of 60" do
